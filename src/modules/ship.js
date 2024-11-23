@@ -1,17 +1,19 @@
 export function Ship(length) {
-  const hits = 0;
+  let hits = 0;
 
   function hit() {
-    hits += 1;
+    hits++;
+  }
+  const getHits = () => {
+    return hits;
   }
 
   function isSunk() {
     if (hits >= length) {
-      return True;
+      return true;
     } else {
-      return False;
+      return false;
     }
   }
-
-  return { hit, isSunk, length };
+  return { getHits, hit, isSunk, length };
 }
