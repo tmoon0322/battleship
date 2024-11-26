@@ -1,6 +1,6 @@
-import { Player } from '../src/model/player';
-import { Gameboard } from '../src/model/gameboard';
-import { Ship } from '../src/model/ship';
+import { Player } from '../modules/player';
+import { Gameboard } from '../modules/gameboard';
+import { Ship } from '../modules/ship';
 
 describe('Player Factory', () => {
   test('player attacks enemy gameboard', () => {

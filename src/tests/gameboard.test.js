@@ -1,5 +1,5 @@
-import { Gameboard } from '../src/model/gameboard';
-import { Ship } from '../src/model/ship';
+import { Gameboard } from '../modules/gameboard';
+import { Ship } from '../modules/ship';
 
 describe('Gameboard Factory', () => {
     test('places a ship horizontally', () => {

@@ -1,4 +1,4 @@
-import { Ship } from '../src/model/ship'
+import { Ship } from '../modules/ship'
 
 describe('Ship Factory', () => {
     test('creates a ship with the correct length', () => {
