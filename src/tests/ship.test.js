@@ -1,21 +1,29 @@
-import { Ship } from "../modules/ship";
+import { Ship } from '../src/model/ship'
 
-test('New ship of length 5 has length 5', () => {
-    const newShip = Ship(5)
-
-    expect(newShip.length).toBe(5)
-})
-
-test('New ship takes hit and correctly updates hit attribute', () => {
-    const newShip = Ship(3)
-    newShip.hit()
-    expect(newShip.getHits()).toBe(1)
-})
-
-test('New ship that gets hit its "length" number of times is sunk', () => {
-    const newShip = Ship(3)
-    newShip.hit()
-    newShip.hit()
-    newShip.hit()
-    expect(newShip.isSunk()).toBe(true)
-})
+describe('Ship Factory', () => {
+    test('creates a ship with the correct length', () => {
+      const ship = Ship('TestShip', 4)
+      expect(ship.length).toBe(4);
+    });
+  
+    test('hit() increases the number of hits', () => {
+      const ship = Ship('TestShip', 4)
+      ship.hit();
+      expect(ship.hits).toBe(1);
+    });
+  
+    test('isSunk() returns true when ship is sunk', () => {
+      const ship = Ship('TestShip', 4);  // Create a ship of length 4
+      ship.hit(); // 1st hit
+      ship.hit(); // 2nd hit
+      ship.hit(); // 3rd hit
+      ship.hit(); // 4th hit
+      expect(ship.isSunk()).toBe(true);  // Test if the ship is sunk after 4 hits
+    });
+  
+    test('isSunk() returns false when ship is not yet sunk', () => {
+      const ship = Ship('TestShip', 4)
+      ship.hit();
+      expect(ship.isSunk()).toBe(false);
+    });
+  });
