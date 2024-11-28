@@ -1,3 +1,3 @@
 import "./style.css";
-
-console.log("hello");
+import gameController from './modules/gamecontroller.js';
+gameController.startGame();

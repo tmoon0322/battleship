@@ -1,8 +1,4 @@
 import { Ship } from './ship.js';
-// import { GridView } from '../view/gridView.js';
-// import { getPlayerGridElement, getComputerGridElement } from '../controller/gameController.js';
-
-
 
 export function Gameboard() {
   // Ensure the board is a 10x10 grid of null values
