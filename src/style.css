@@ -10,14 +10,13 @@ body, h1, h2, .status-message, button, input {
 }
 body {
   font-family: 'Roboto', sans-serif;
-  /* background-image: url(/src/assets/battlephase.jpg); */
+  background-image: url(./assets/images/start_2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 header h1 {
   text-transform: uppercase;
@@ -38,7 +37,7 @@ header h1 {
   width: 100%;
   text-align: center;
   /* Add a background image */
-  /* background-image: url('../assets/battleship.jpg'); */
+  background-image: url('./assets/images/battle.jpg');
   background-size: cover;
   background-position: center;
   padding: 50px;
